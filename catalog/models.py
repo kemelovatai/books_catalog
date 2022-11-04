@@ -60,6 +60,7 @@ class Book(BaseModel):
         return f'Id {self.id}: {self.name}'
 
 
+# use UserBookRelation model instead of m2m relation to handle multiple actions (save, rate) with one model
 class UserBookRelation(BaseModel):
     RATING_CHOICES = (
         (1, 'Terrible'),
